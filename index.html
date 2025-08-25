@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en" data-color-scheme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuantEdu Partnership Platform - Interactive Business Proposals</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="brand-section">
+                <h1>QuantEdu Partnership Platform</h1>
+                <p class="tagline">AI-Powered Securities Market Education Solutions</p>
+            </div>
+            <div class="header-controls">
+                <div class="peer-selector-header">
+                    <label for="peer-select-header" class="peer-label">Select Partner:</label>
+                    <select id="peer-select-header" class="form-control peer-select">
+                        <option value="">Choose EdTech Partner...</option>
+                        <option value="upGrad">upGrad</option>
+                        <option value="Unacademy">Unacademy</option>
+                        <option value="Emeritus">Emeritus</option>
+                        <option value="Physics Wallah">Physics Wallah</option>
+                        <option value="BYJU'S">BYJU'S</option>
+                        <option value="Vedantu">Vedantu</option>
+                        <option value="Simplilearn">Simplilearn</option>
+                        <option value="Great Learning">Great Learning</option>
+                        <option value="Imarticus Learning">Imarticus Learning</option>
+                        <option value="QuantInsti">QuantInsti</option>
+                    </select>
+                </div>
+                <button id="theme-toggle" class="btn btn--outline btn--sm">
+                    <span id="theme-icon">🌙</span>
+                </button>
+                <button id="comparison-toggle" class="btn btn--secondary btn--sm">
+                    <span>📊</span> Compare
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="app-container">
+        <!-- Navigation Sidebar -->
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-content">
+                <div class="nav-brand">
+                    <h3>Business Intelligence</h3>
+                    <p id="selected-peer-name">Select a partner to begin</p>
+                    <div class="partner-status" id="partner-status">No partner selected</div>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#executive-dashboard" class="nav-link active" data-section="executive-dashboard">📊 Executive Dashboard</a></li>
+                    <li><a href="#market-analysis" class="nav-link" data-section="market-analysis">📈 Market Analysis</a></li>
+                    <li><a href="#business-model" class="nav-link" data-section="business-model">💼 Business Model</a></li>
+                    <li><a href="#competitive-edge" class="nav-link" data-section="competitive-edge">🎯 Competitive Edge</a></li>
+                    <li><a href="#financial-projections" class="nav-link" data-section="financial-projections">💰 Financial Projections</a></li>
+                    <li><a href="#partnership-terms" class="nav-link" data-section="partnership-terms">🤝 Partnership Terms</a></li>
+                    <li><a href="#roi-calculator" class="nav-link" data-section="roi-calculator">📊 ROI Calculator</a></li>
+                    <li><a href="#appendices" class="nav-link" data-section="appendices">📋 Resources</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Executive Dashboard -->
+            <section id="executive-dashboard" class="content-section active">
+                <div class="section-header">
+                    <h2>Executive Dashboard</h2>
+                    <p class="section-subtitle">Comprehensive Partnership Intelligence Platform</p>
+                </div>
+
+                <div class="peer-selector-main">
+                    <div class="card">
+                        <div class="card__body">
+                            <h3>Select EdTech Partnership Target</h3>
+                            <div class="peer-selection-grid">
+                                <div class="peer-input-group">
+                                    <label for="peer-select-main" class="form-label">Primary Partner:</label>
+                                    <select id="peer-select-main" class="form-control peer-select-large">
+                                        <option value="">Choose your strategic partner...</option>
+                                        <option value="upGrad">upGrad</option>
+                                        <option value="Unacademy">Unacademy</option>
+                                        <option value="Emeritus">Emeritus</option>
+                                        <option value="Physics Wallah">Physics Wallah</option>
+                                        <option value="BYJU'S">BYJU'S</option>
+                                        <option value="Vedantu">Vedantu</option>
+                                        <option value="Simplilearn">Simplilearn</option>
+                                        <option value="Great Learning">Great Learning</option>
+                                        <option value="Imarticus Learning">Imarticus Learning</option>
+                                        <option value="QuantInsti">QuantInsti</option>
+                                    </select>
+                                </div>
+                                <div class="peer-input-group">
+                                    <label for="comparison-peer-select" class="form-label">Compare with:</label>
+                                    <select id="comparison-peer-select" class="form-control peer-select-large">
+                                        <option value="">Optional comparison...</option>
+                                        <option value="upGrad">upGrad</option>
+                                        <option value="Unacademy">Unacademy</option>
+                                        <option value="Emeritus">Emeritus</option>
+                                        <option value="Physics Wallah">Physics Wallah</option>
+                                        <option value="BYJU'S">BYJU'S</option>
+                                        <option value="Vedantu">Vedantu</option>
+                                        <option value="Simplilearn">Simplilearn</option>
+                                        <option value="Great Learning">Great Learning</option>
+                                        <option value="Imarticus Learning">Imarticus Learning</option>
+                                        <option value="QuantInsti">QuantInsti</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="key-metrics-dashboard" id="key-metrics-dashboard">
+                    <div class="no-peer-selected">
+                        <div class="placeholder-content">
+                            <h3>🚀 Welcome to QuantEdu Partnership Platform</h3>
+                            <p>Select an EdTech partner above to view comprehensive business intelligence, financial projections, and partnership opportunities.</p>
+                            <div class="feature-highlights">
+                                <div class="feature-item" onclick="showSection('market-analysis')">
+                                    <span class="feature-icon">📊</span>
+                                    <span>Real-time Data Analytics</span>
+                                </div>
+                                <div class="feature-item" onclick="showSection('financial-projections')">
+                                    <span class="feature-icon">💰</span>
+                                    <span>Financial Projections</span>
+                                </div>
+                                <div class="feature-item" onclick="showSection('market-analysis')">
+                                    <span class="feature-icon">🎯</span>
+                                    <span>Market Intelligence</span>
+                                </div>
+                                <div class="feature-item" onclick="showSection('partnership-terms')">
+                                    <span class="feature-icon">🤝</span>
+                                    <span>Partnership Modeling</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proposal-overview" id="proposal-overview" style="display: none;">
+                    <div class="value-proposition-grid">
+                        <div class="value-prop-card">
+                            <h4>🎓 World-Class Financial Education</h4>
+                            <p>Comprehensive coverage of all 10 professional finance certifications with SEBI-verified expertise</p>
+                        </div>
+                        <div class="value-prop-card">
+                            <h4>🔬 Quantitative Excellence</h4>
+                            <p>15+ years WorldQuant experience with proprietary AI-driven trading and investment algorithms</p>
+                        </div>
+                        <div class="value-prop-card">
+                            <h4>📱 Proprietary Technology</h4>
+                            <p>Custom training apps for TA/FA/Quantitative Analysis and AI-powered career counseling</p>
+                        </div>
+                        <div class="value-prop-card">
+                            <h4>⚖️ Regulatory Compliance</h4>
+                            <p>SEBI registered RA/IA/PM professionals ensuring complete regulatory adherence</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-section" id="cta-section" style="display: none;">
+                    <h3 id="cta-title">Ready to Transform Financial Education?</h3>
+                    <p id="cta-subtitle">Partner with us to capture the $5.6 billion financial education market opportunity</p>
+                    <div class="cta-buttons">
+                        <button class="btn btn--primary btn--lg" onclick="showScheduleModal()">💼 Schedule Executive Presentation</button>
+                        <button class="btn btn--outline btn--lg" onclick="handleDownload()">📊 Download Full Proposal</button>
+                        <button class="btn btn--secondary btn--lg" onclick="showContactModal()">📞 Request Partnership Call</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Market Analysis Section -->
+            <section id="market-analysis" class="content-section">
+                <div class="section-header">
+                    <h2>Market Analysis & TAM</h2>
+                    <p class="section-subtitle">Total Addressable Market Intelligence</p>
+                </div>
+
+                <div class="market-overview-grid">
+                    <div class="market-stat-card">
+                        <h4>Global FinTech Education</h4>
+                        <h3>$10.0 Tn</h3>
+                        <p>Expected by 2030</p>
+                        <span class="growth-indicator">+6.5% CAGR</span>
+                    </div>
+                    <div class="market-stat-card">
+                        <h4>India Securities Education</h4>
+                        <h3>$5.6 Bn</h3>
+                        <p>TAM by 2030</p>
+                        <span class="growth-indicator">+30.3% CAGR</span>
+                    </div>
+                    <div class="market-stat-card">
+                        <h4>Partnership Opportunity</h4>
+                        <h3 id="partner-tam">Select Partner</h3>
+                        <p>Revenue potential</p>
+                        <span class="growth-indicator" id="partner-growth">TBD</span>
+                    </div>
+                </div>
+
+                <div class="charts-grid">
+                    <div class="chart-container">
+                        <div class="card">
+                            <div class="card__body">
+                                <h3>Market Growth Projections (2025-2030)</h3>
+                                <div class="chart-wrapper" style="position: relative; height: 400px;">
+                                    <canvas id="market-growth-chart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chart-container">
+                        <div class="card">
+                            <div class="card__body">
+                                <h3>Partner TAM Analysis</h3>
+                                <div class="chart-wrapper" style="position: relative; height: 400px;">
+                                    <canvas id="partner-tam-chart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tam-breakdown">
+                    <div class="card">
+                        <div class="card__body">
+                            <h3>Securities Market Education Opportunity</h3>
+                            <div class="tam-segments">
+                                <div class="tam-segment">
+                                    <h4>Target Segments</h4>
+                                    <ul>
+                                        <li><strong>2M+ Engineering & MBA students</strong> - Career transition to finance</li>
+                                        <li><strong>5M+ Working professionals</strong> - Seeking financial expertise</li>
+                                        <li><strong>1M+ Finance professionals</strong> - Advanced certification needs</li>
+                                        <li><strong>10M+ Retail investors</strong> - Professional education requirements</li>
+                                    </ul>
+                                </div>
+                                <div class="tam-segment">
+                                    <h4>Certification Market Size</h4>
+                                    <div class="cert-market-grid" id="cert-market-grid">
+                                        <div class="cert-market-item">
+                                            <h5>CFA (All Levels)</h5>
+                                            <p>₹1,200 Cr → ₹2,800 Cr</p>
+                                        </div>
+                                        <div class="cert-market-item">
+                                            <h5>NISM Series 21B</h5>
+                                            <p>₹450 Cr → ₹1,200 Cr</p>
+                                        </div>
+                                        <div class="cert-market-item">
+                                            <h5>NISM Series 15</h5>
+                                            <p>₹380 Cr → ₹950 Cr</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Business Model Section -->
+            <section id="business-model" class="content-section">
+                <div class="section-header">
+                    <h2>Business Model & Course Structure</h2>
+                    <p class="section-subtitle">Comprehensive Financial Education Ecosystem</p>
+                </div>
+
+                <div class="revenue-model-chart">
+                    <div class="card">
+                        <div class="card__body">
+                            <h3>Revenue Model & Pricing Strategy</h3>
+                            <div class="chart-wrapper" style="position: relative; height: 400px;">
+                                <canvas id="revenue-model-chart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-portfolio">
+                    <div class="card">
+                        <div class="card__body">
+                            <h3>Professional Certification Coverage</h3>
+                            <div class="cert-coverage-grid">
+                                <div class="cert-category">
+                                    <h4>🇺🇸 US Certifications</h4>
+                                    <div class="cert-items">
+                                        <div class="cert-item">
+                                            <h5>CFA (Chartered Financial Analyst)</h5>
+                                            <p>Cost: $3,500 | Duration: 48 months | Demand: Very High</p>
+                                            <div class="market-size">Market: ₹1,200 Cr → ₹2,800 Cr (2030)</div>
+                                        </div>
+                                        <div class="cert-item">
+                                            <h5>CFP (Certified Financial Planner)</h5>
+                                            <p>Cost: $925 | Duration: 12 months | Demand: Medium</p>
+                                            <div class="market-size">Market: ₹190 Cr → ₹480 Cr (2030)</div>
+                                        </div>
+                                        <div class="cert-item">
+                                            <h5>CMT (Chartered Market Technician)</h5>
+                                            <p>Cost: $2,200 | Duration: 18 months | Demand: Medium</p>
+                                            <div class="market-size">Market: ₹85 Cr → ₹250 Cr (2030)</div>
+                                        </div>
+                                        <div class="cert-item">
+                                            <h5>CAIA (Chartered Alternative Investment)</h5>
+                                            <p>Cost: $3,190 | Duration: 18 months | Demand: High</p>
+                                            <div class="market-size">Market: ₹145 Cr → ₹450 Cr (2030)</div>
+                                        </div>
+                                        <div class="cert-item">
+                                            <h5>Series 7 (General Securities)</h5>
+                                            <p>Cost: $300 | Duration: 4 months | Demand: Low</p>
+                                            <div class="market-size">Market: ₹25 Cr → ₹80 Cr (2030)</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="cert-category">
+                                    <h4>🇮🇳 NISM Certifications</h4>
+                                    <div class="cert-items">
+                                        <div class="cert-item">
+                                            <h5>Series 21B (Portfolio Manager)</h5>
+                                            <p>Cost: $50 | Duration: 3 months | Demand: Very High</p>
+                                            <div class="market-size">Market: ₹450 Cr → ₹1,200 Cr (2030)</div>
+                                        </div>
+                                        <div class="cert-item">
+                                            <h5>Series 15 (Research Analyst)</h5>
+                                            <p>Cost: $50 | Duration: 3 months | Demand: Very High</p>
+                                            <div class="market-size">Market: ₹380 Cr → ₹950 Cr (2030)</div>
+                                        </div>
+                                        <div class="cert-item">
+                                            <h5>Series 10A/B (Investment Adviser)</h5>
+                                            <p>Cost: $50 | Duration: 3 months | Demand: High</p>
+                                            <div class="market-size">Market: ₹320 Cr → ₹850 Cr (2030)</div>
+                                        </div>
+                                        <div class="cert-item">
+                                            <h5>Series 19C/D (Hedge Fund)</h5>
+                                            <p>Cost: $50 | Duration: 3 months | Demand: High</p>
+                                            <div class="market-size">Market: ₹180 Cr → ₹600 Cr (2030)</div>
+                                        </div>
+                                        <div class="cert-item">
+                                            <h5>Series 9 (Merchant Banking)</h5>
+                                            <p>Cost: $50 | Duration: 3 months | Demand: Very High</p>
+                                            <div class="market-size">Market: ₹280 Cr → ₹750 Cr (2030)</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-pricing">
+                    <div class="card">
+                        <div class="card__body">
+                            <h3>Course Pricing Structure</h3>
+                            <div class="pricing-table-wrapper">
+                                <table class="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Course Package</th>
+                                            <th>Price (₹)</th>
+                                            <th>Target Students</th>
+                                            <th>Revenue Potential (₹ Cr)</th>
+                                            <th>Certifications Included</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Expert Quant Trader</strong></td>
+                                            <td>₹72,000</td>
+                                            <td>100,000</td>
+                                            <td>720</td>
+                                            <td>CMT, Series 7, NISM 15</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Expert Quant Investor</strong></td>
+                                            <td>₹72,000</td>
+                                            <td>150,000</td>
+                                            <td>1,080</td>
+                                            <td>CFA, CAIA, NISM 21B</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>AI Algo Trader</strong></td>
+                                            <td>₹36,000</td>
+                                            <td>75,000</td>
+                                            <td>270</td>
+                                            <td>CMT, NISM 15, Series 7</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>AI Algo Investor</strong></td>
+                                            <td>₹36,000</td>
+                                            <td>100,000</td>
+                                            <td>360</td>
+                                            <td>CFA Level I, NISM 10A</td>
+                                        </tr>
+                                        <tr class="highlight-row">
+                                            <td><strong>Complete Finance Pro</strong></td>
+                                            <td>₹120,000</td>
+                                            <td>75,000</td>
+                                            <td>900</td>
+                                            <td>All 10 Certifications</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Competitive Edge Section -->
+            <section id="competitive-edge" class="content-section">
+                <div class="section-header">
+                    <h2>Competitive Advantages</h2>
+                    <p class="section-subtitle">Our Unique Market Position & Technology Moat</p>
+                </div>
+
+                <div class="competitive-landscape">
+                    <div class="card">
+                        <div class="card__body">
+                            <h3>EdTech Competitive Analysis</h3>
+                            <div class="chart-wrapper" style="position: relative; height: 500px;">
+                                <canvas id="competitive-analysis-chart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="competitive-matrix">
+                    <div class="card">
+                        <div class="card__body">
+                            <h3 id="competitor-comparison-title">Market Position Analysis</h3>
+                            <div class="competitor-table-wrapper">
+                                <table class="data-table" id="competitor-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Company</th>
+                                            <th>Valuation ($ Mn)</th>
+                                            <th>Users (M)</th>
+                                            <th>Financial Education</th>
+                                            <th>Growth Rate (%)</th>
+                                            <th>Partnership Potential (₹ Cr)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="competitor-table-body">
+                                        <tr>
+                                            <td><strong>upGrad</strong></td>
+                                            <td>$2.3M</td>
+                                            <td>5.0M</td>
+                                            <td>Basic</td>
+                                            <td>30%</td>
+                                            <td>₹1,167.4 Cr</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Unacademy</strong></td>
+                                            <td>$3.1B</td>
+                                            <td>50.0M</td>
+                                            <td>No</td>
+                                            <td>158%</td>
+                                            <td>₹1,132.0 Cr</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Emeritus</strong></td>
+                                            <td>$3.2B</td>
+                                            <td>1.8M</td>
+                                            <td>Finance MBA</td>
+                                            <td>15%</td>
+                                            <td>₹866.0 Cr</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="moat-analysis">
+                    <h3>Our Competitive Moats</h3>
+                    <div class="moat-grid">
+                        <div class="moat-card">
+                            <div class="moat-icon">🔬</div>
+                            <h4>Quantitative Expertise</h4>
+                            <p>15+ years WorldQuant experience with proprietary algorithms and AI-driven risk management systems</p>
+                            <div class="moat-metrics">
+                                <span>✓ 200+ Trading Strategies</span>
+                                <span>✓ AI Risk Models</span>
+                                <span>✓ Real-time Analytics</span>
+                            </div>
+                        </div>
+                        <div class="moat-card">
+                            <div class="moat-icon">⚖️</div>
+                            <h4>Regulatory Excellence</h4>
+                            <p>SEBI verified NISM certified RA/IA/PM ensuring complete compliance and credibility</p>
+                            <div class="moat-metrics">
+                                <span>✓ SEBI Registration</span>
+                                <span>✓ NISM Certification</span>
+                                <span>✓ Compliance Framework</span>
+                            </div>
+                        </div>
+                        <div class="moat-card">
+                            <div class="moat-icon">📱</div>
+                            <h4>Proprietary Technology</h4>
+                            <p>Custom training platforms for TA/FA/Quantitative Analysis and AI-powered career guidance</p>
+                            <div class="moat-metrics">
+                                <span>✓ Trading Simulators</span>
+                                <span>✓ Portfolio Analytics</span>
+                                <span>✓ Career AI Engine</span>
+                            </div>
+                        </div>
+                        <div class="moat-card">
+                            <div class="moat-icon">🎓</div>
+                            <h4>Industry Network</h4>
+                            <p>Access to top-tier finance professionals from Goldman Sachs, JP Morgan, and leading fund houses</p>
+                            <div class="moat-metrics">
+                                <span>✓ C-Suite Mentors</span>
+                                <span>✓ Industry Partnerships</span>
+                                <span>✓ Job Placement Network</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Financial Projections Section -->
+            <section id="financial-projections" class="content-section">
+                <div class="section-header">
+                    <h2>Financial Projections</h2>
+                    <p class="section-subtitle">Data-Driven Partnership Growth Forecasts</p>
+                </div>
+
+                <div class="projection-dashboard" id="projection-dashboard">
+                    <div class="projection-summary">
+                        <div class="projection-card">
+                            <h4>2025 Projection</h4>
+                            <h3 id="proj-2025">Select Partner</h3>
+                            <p>Starting Revenue</p>
+                        </div>
+                        <div class="projection-card">
+                            <h4>2030 Projection</h4>
+                            <h3 id="proj-2030">Select Partner</h3>
+                            <p>Target Revenue</p>
+                        </div>
+                        <div class="projection-card">
+                            <h4>Growth CAGR</h4>
+                            <h3 id="proj-cagr">TBD</h3>
+                            <p>Compound Annual Growth</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="charts-grid">
+                    <div class="chart-container">
+                        <div class="card">
+                            <div class="card__body">
+                                <h3>Partnership Revenue Projections (2025-2030)</h3>
+                                <div class="chart-wrapper" style="position: relative; height: 400px;">
+                                    <canvas id="partnership-projections-chart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chart-container">
+                        <div class="card">
+                            <div class="card__body">
+                                <h3>Market Share Evolution</h3>
+                                <div class="chart-wrapper" style="position: relative; height: 400px;">
+                                    <canvas id="market-share-chart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="detailed-projections">
+                    <div class="card">
+                        <div class="card__body">
+                            <h3 id="detailed-projections-title">Detailed Financial Forecast</h3>
+                            <div class="projection-table-wrapper">
+                                <table class="data-table" id="detailed-projections-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Year</th>
+                                            <th>Core Revenue (₹ Cr)</th>
+                                            <th>FinEdu Revenue (₹ Cr)</th>
+                                            <th>Total Revenue (₹ Cr)</th>
+                                            <th>FinEdu Share (%)</th>
+                                            <th>Students</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="detailed-projections-body">
+                                        <tr>
+                                            <td colspan="6" style="text-align: center; padding: 24px;">Select a partner to view detailed projections</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Partnership Terms Section -->
+            <section id="partnership-terms" class="content-section">
+                <div class="section-header">
+                    <h2>Partnership Terms</h2>
+                    <p class="section-subtitle">Flexible Investment & Revenue Models</p>
+                </div>
+
+                <div class="terms-calculator">
+                    <div class="card">
+                        <div class="card__body">
+                            <h3>Partnership Structure Calculator</h3>
+                            <div class="calculator-grid">
+                                <div class="calculator-input">
+                                    <label for="equity-share" class="form-label">Equity Share (%):</label>
+                                    <input type="range" id="equity-share" class="form-control range-input" min="10" max="25" value="15" step="1">
+                                    <span class="range-value" id="equity-value">15%</span>
+                                </div>
+                                <div class="calculator-input">
+                                    <label for="fixed-income" class="form-label">Annual Fixed (₹ Cr):</label>
+                                    <input type="range" id="fixed-income" class="form-control range-input" min="1" max="5" value="2.5" step="0.5">
+                                    <span class="range-value" id="fixed-value">₹2.5 Cr</span>
+                                </div>
+                                <div class="calculator-input">
+                                    <label for="variable-bonus" class="form-label">Variable Bonus (%):</label>
+                                    <input type="range" id="variable-bonus" class="form-control range-input" min="5" max="20" value="12" step="1">
+                                    <span class="range-value" id="variable-value">12%</span>
+                                </div>
+                                <div class="calculator-input">
+                                    <label for="revenue-share" class="form-label">Revenue Share (%):</label>
+                                    <input type="range" id="revenue-share" class="form-control range-input" min="3" max="10" value="6" step="0.5">
+                                    <span class="range-value" id="revenue-value">6%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="terms-visualization">
+                    <div class="card">
+                        <div class="card__body">
+                            <h3>Partnership Value Distribution</h3>
+                            <div class="chart-wrapper" style="position: relative; height: 400px;">
+                                <canvas id="partnership-terms-chart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mutual-benefits">
+                    <div class="benefits-grid">
+                        <div class="benefits-section">
+                            <div class="card">
+                                <div class="card__body">
+                                    <h3>💼 What We Bring</h3>
+                                    <div class="benefit-items">
+                                        <div class="benefit-item">
+                                            <span class="benefit-icon">🎓</span>
+                                            <div class="benefit-content">
+                                                <h4>World-Class Expertise</h4>
+                                                <p>15+ years WorldQuant experience, SEBI certified professionals</p>
+                                            </div>
+                                        </div>
+                                        <div class="benefit-item">
+                                            <span class="benefit-icon">📚</span>
+                                            <div class="benefit-content">
+                                                <h4>Complete Curriculum</h4>
+                                                <p>All 10 professional finance certifications with proprietary content</p>
+                                            </div>
+                                        </div>
+                                        <div class="benefit-item">
+                                            <span class="benefit-icon">🔧</span>
+                                            <div class="benefit-content">
+                                                <h4>Technology Stack</h4>
+                                                <p>Proprietary trading simulators and AI-powered learning platforms</p>
+                                            </div>
+                                        </div>
+                                        <div class="benefit-item">
+                                            <span class="benefit-icon">⚖️</span>
+                                            <div class="benefit-content">
+                                                <h4>Regulatory Compliance</h4>
+                                                <p>SEBI registration and complete regulatory framework</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="benefits-section">
+                            <div class="card">
+                                <div class="card__body">
+                                    <h3 id="partner-brings-title">🏢 Partner Provides</h3>
+                                    <div class="benefit-items" id="partner-benefits">
+                                        <div class="benefit-item">
+                                            <span class="benefit-icon">👥</span>
+                                            <div class="benefit-content">
+                                                <h4>User Base</h4>
+                                                <p>Select a partner to see their specific contributions</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="implementation-roadmap">
+                    <div class="card">
+                        <div class="card__body">
+                            <h3>Implementation Roadmap</h3>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <h4>Q1 2025</h4>
+                                    <p>Partnership agreement and team formation</p>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <h4>Q2 2025</h4>
+                                    <p>Course development and platform integration</p>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <h4>Q3 2025</h4>
+                                    <p>Beta launch with select student cohorts</p>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <h4>Q4 2025</h4>
+                                    <p>Full market launch and scaling operations</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ROI Calculator Section -->
+            <section id="roi-calculator" class="content-section">
+                <div class="section-header">
+                    <h2>ROI Calculator</h2>
+                    <p class="section-subtitle">Interactive Investment Return Analysis</p>
+                </div>
+
+                <div class="roi-inputs">
+                    <div class="card">
+                        <div class="card__body">
+                            <h3>Investment Parameters</h3>
+                            <div class="roi-calculator-grid">
+                                <div class="roi-input-group">
+                                    <label for="initial-investment" class="form-label">Initial Investment (₹ Cr):</label>
+                                    <input type="number" id="initial-investment" class="form-control" value="50" min="10" max="500" step="10">
+                                </div>
+                                <div class="roi-input-group">
+                                    <label for="operational-cost" class="form-label">Annual Operational Cost (₹ Cr):</label>
+                                    <input type="number" id="operational-cost" class="form-control" value="20" min="5" max="100" step="5">
+                                </div>
+                                <div class="roi-input-group">
+                                    <label for="marketing-budget" class="form-label">Marketing Budget (₹ Cr):</label>
+                                    <input type="number" id="marketing-budget" class="form-control" value="15" min="5" max="50" step="2.5">
+                                </div>
+                                <div class="roi-input-group">
+                                    <label for="team-size" class="form-label">Team Size:</label>
+                                    <input type="number" id="team-size" class="form-control" value="25" min="10" max="100" step="5">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="roi-results">
+                    <div class="roi-metrics-grid">
+                        <div class="roi-metric">
+                            <h4>Break-even Period</h4>
+                            <h3 id="breakeven-period">--</h3>
+                            <p>Months to profitability</p>
+                        </div>
+                        <div class="roi-metric">
+                            <h4>5-Year ROI</h4>
+                            <h3 id="five-year-roi">--</h3>
+                            <p>Return on investment</p>
+                        </div>
+                        <div class="roi-metric">
+                            <h4>NPV (₹ Cr)</h4>
+                            <h3 id="npv-value">--</h3>
+                            <p>Net present value</p>
+                        </div>
+                        <div class="roi-metric">
+                            <h4>IRR (%)</h4>
+                            <h3 id="irr-value">--</h3>
+                            <p>Internal rate of return</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="roi-chart">
+                    <div class="card">
+                        <div class="card__body">
+                            <h3>Cumulative Cash Flow Analysis</h3>
+                            <div class="chart-wrapper" style="position: relative; height: 400px;">
+                                <canvas id="roi-cashflow-chart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Appendices Section -->
+            <section id="appendices" class="content-section">
+                <div class="section-header">
+                    <h2>Resources & Documentation</h2>
+                    <p class="section-subtitle">Supporting Materials & Contact Information</p>
+                </div>
+
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">📊</div>
+                        <h3>Market Research</h3>
+                        <ul>
+                            <li>Ernst & Young Global Education Report 2024</li>
+                            <li>KPMG India EdTech Analysis 2024</li>
+                            <li>BCG FinTech Market Study</li>
+                            <li>PwC Financial Education Report</li>
+                        </ul>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">⚖️</div>
+                        <h3>Regulatory Framework</h3>
+                        <ul>
+                            <li>SEBI (Investment Advisers) Regulations 2013</li>
+                            <li>NISM Certification Requirements</li>
+                            <li>RBI Financial Literacy Guidelines</li>
+                            <li>AMFI Mutual Fund Regulations</li>
+                        </ul>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">🔧</div>
+                        <h3>Technology Stack</h3>
+                        <ul>
+                            <li>Proprietary Quantitative Analysis Platform</li>
+                            <li>AI-Powered Trading Simulators</li>
+                            <li>Research Analytics Dashboard</li>
+                            <li>Career Counseling AI Engine</li>
+                        </ul>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">🎓</div>
+                        <h3>Expert Network</h3>
+                        <ul>
+                            <li>Former Goldman Sachs Professionals</li>
+                            <li>JP Morgan Algorithmic Trading Experts</li>
+                            <li>NSE/BSE Market Structure Specialists</li>
+                            <li>Top Mutual Fund CIOs & Portfolio Managers</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="contact-section">
+                    <div class="card">
+                        <div class="card__body">
+                            <h3>Contact & Next Steps</h3>
+                            <div class="contact-grid">
+                                <div class="contact-info">
+                                    <h4>Survesh Bajpai</h4>
+                                    <p>Founder & Lead Quantitative Strategist</p>
+                                    <p>📧 survesh@quantedu.in</p>
+                                    <p>📱 +91-9876543210</p>
+                                </div>
+                                <div class="contact-info">
+                                    <h4>Business Development</h4>
+                                    <p>Partnership & Investment Queries</p>
+                                    <p>📧 partnerships@quantedu.in</p>
+                                    <p>📱 +91-9876543211</p>
+                                </div>
+                            </div>
+                            <div class="contact-actions">
+                                <button class="btn btn--primary" onclick="showScheduleModal()">📅 Schedule Strategy Session</button>
+                                <button class="btn btn--outline" onclick="handleDownload()">📋 Request Detailed Proposal</button>
+                                <button class="btn btn--secondary" onclick="showContactModal()">💼 Partnership Inquiry</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Comparison Modal -->
+    <div id="comparison-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Partner Comparison Analysis</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="comparison-charts">
+                    <div class="chart-wrapper" style="position: relative; height: 300px;">
+                        <canvas id="comparison-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    
+    <!-- Global Functions for onClick handlers -->
+    <script>
+    function showSection(sectionId) {
+        if (window.showSectionGlobal) {
+            window.showSectionGlobal(sectionId);
+        } else {
+            console.log('Navigation to:', sectionId);
+        }
+    }
+
+    function showScheduleModal() {
+        if (window.showScheduleModalGlobal) {
+            window.showScheduleModalGlobal();
+        }
+    }
+
+    function showContactModal() {
+        if (window.showContactModalGlobal) {
+            window.showContactModalGlobal();
+        }
+    }
+
+    function handleDownload() {
+        if (window.handleDownloadGlobal) {
+            window.handleDownloadGlobal();
+        }
+    }
+    </script>
+</body>
+</html>
