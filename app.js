@@ -1,16 +1,16 @@
 // Application Data
 const APP_DATA = {
   "peers_comprehensive": [
-    {"company": "Physics Wallah", "fy25_revenue": 2400, "profit_loss": 50, "valuation_usd": 2800, "users_million": 15.5, "securities_addressable": 0.775, "tam_crores": 1.9, "partnership_2030": 182.8, "financial_education": "No", "ipo_status": "Filed", "growth_rate": 55, "ebitda_margin": 2.1},
-    {"company": "BYJU'S", "fy25_revenue": 4000, "profit_loss": -8245, "valuation_usd": 1000, "users_million": 150, "securities_addressable": 3.0, "tam_crores": 3.6, "partnership_2030": 339.6, "financial_education": "Limited", "ipo_status": "Bankrupt", "growth_rate": -65, "ebitda_margin": -206},
-    {"company": "Unacademy", "fy25_revenue": 1857, "profit_loss": -1537, "valuation_usd": 3100, "users_million": 50, "securities_addressable": 4.0, "tam_crores": 12.0, "partnership_2030": 1132.0, "financial_education": "No", "ipo_status": "Private", "growth_rate": 158, "ebitda_margin": -83},
-    {"company": "upGrad", "fy25_revenue": 1876, "profit_loss": -285, "valuation_usd": 2250, "users_million": 5, "securities_addressable": 2.25, "tam_crores": 12.4, "partnership_2030": 1167.4, "financial_education": "Basic", "ipo_status": "Private", "growth_rate": 30, "ebitda_margin": -15},
-    {"company": "Vedantu", "fy25_revenue": 284, "profit_loss": 25, "valuation_usd": 920, "users_million": 4.5, "securities_addressable": 0.135, "tam_crores": 0.2, "partnership_2030": 22.9, "financial_education": "No", "ipo_status": "Planning", "growth_rate": 55, "ebitda_margin": 8.8},
-    {"company": "Imarticus Learning", "fy25_revenue": 205, "profit_loss": 15, "valuation_usd": 130, "users_million": 0.04, "securities_addressable": 0.038, "tam_crores": 0.4, "partnership_2030": 34.1, "financial_education": "CFA/FRM", "ipo_status": "Planning", "growth_rate": 16, "ebitda_margin": 7.3},
-    {"company": "QuantInsti", "fy25_revenue": 145, "profit_loss": 12, "valuation_usd": 130, "users_million": 0.13, "securities_addressable": 0.1274, "tam_crores": 1.5, "partnership_2030": 144.2, "financial_education": "Quant Specialty", "ipo_status": "Private", "growth_rate": 8, "ebitda_margin": 8.3},
-    {"company": "Simplilearn", "fy25_revenue": 850, "profit_loss": -120, "valuation_usd": 1200, "users_million": 3.2, "securities_addressable": 0.8, "tam_crores": 3.6, "partnership_2030": 339.6, "financial_education": "Limited", "ipo_status": "Private", "growth_rate": -15, "ebitda_margin": -14.1},
-    {"company": "Great Learning", "fy25_revenue": 900, "profit_loss": -80, "valuation_usd": 1100, "users_million": 2.1, "securities_addressable": 0.63, "tam_crores": 3.1, "partnership_2030": 297.2, "financial_education": "Limited", "ipo_status": "Private", "growth_rate": 10, "ebitda_margin": -8.9},
-    {"company": "Emeritus", "fy25_revenue": 2100, "profit_loss": -200, "valuation_usd": 3200, "users_million": 1.8, "securities_addressable": 1.08, "tam_crores": 9.2, "partnership_2030": 866.0, "financial_education": "Finance MBA", "ipo_status": "Private", "growth_rate": 15, "ebitda_margin": -9.5}
+    {"company": "Physics Wallah", "fy25_revenue": 2400, "profit_loss": 50, "valuation_usd": 3.8, "users_million": 25, "securities_addressable": 0.775, "tam_crores": 1.9, "partnership_2030": 182.8, "financial_education": "No", "ipo_status": "Filed", "growth_rate": 55, "ebitda_margin": 2.1},
+    {"company": "BYJU'S", "fy25_revenue": 4000, "profit_loss": -8245, "valuation_usd": 1, "users_million": 1, "securities_addressable": 3.0, "tam_crores": 3.6, "partnership_2030": 339.6, "financial_education": "Limited", "ipo_status": "Bankrupt", "growth_rate": -65, "ebitda_margin": -206},
+    {"company": "Unacademy", "fy25_revenue": 1857, "profit_loss": -1537, "valuation_usd": 0.8, "users_million": 6, "securities_addressable": 4.0, "tam_crores": 12.0, "partnership_2030": 1132.0, "financial_education": "No", "ipo_status": "Private", "growth_rate": 158, "ebitda_margin": -83},
+    {"company": "upGrad", "fy25_revenue": 1876, "profit_loss": -285, "valuation_usd": 2.25, "users_million": 2.96, "securities_addressable": 2.25, "tam_crores": 12.4, "partnership_2030": 1167.4, "financial_education": "Basic", "ipo_status": "Private", "growth_rate": 30, "ebitda_margin": -15},
+    {"company": "Vedantu", "fy25_revenue": 284, "profit_loss": 25, "valuation_usd": 0.920, "users_million": 4.5, "securities_addressable": 0.135, "tam_crores": 0.2, "partnership_2030": 22.9, "financial_education": "No", "ipo_status": "Planning", "growth_rate": 55, "ebitda_margin": 8.8},
+    {"company": "Imarticus Learning", "fy25_revenue": 205, "profit_loss": 15, "valuation_usd": 0.33, "users_million": 5, "securities_addressable": 0.038, "tam_crores": 0.4, "partnership_2030": 34.1, "financial_education": "CFA/FRM", "ipo_status": "Planning", "growth_rate": 16, "ebitda_margin": 7.3},
+    {"company": "QuantInsti", "fy25_revenue": 145, "profit_loss": 12, "valuation_usd": 0.13, "users_million": 0.13, "securities_addressable": 0.1274, "tam_crores": 1.5, "partnership_2030": 144.2, "financial_education": "Quant Specialty", "ipo_status": "Private", "growth_rate": 8, "ebitda_margin": 8.3},
+    {"company": "Simplilearn", "fy25_revenue": 850, "profit_loss": -120, "valuation_usd": 1.2, "users_million": 3.2, "securities_addressable": 0.8, "tam_crores": 3.6, "partnership_2030": 339.6, "financial_education": "Limited", "ipo_status": "Private", "growth_rate": -15, "ebitda_margin": -14.1},
+    {"company": "Great Learning", "fy25_revenue": 900, "profit_loss": -80, "valuation_usd": 1.1, "users_million": 2.1, "securities_addressable": 0.63, "tam_crores": 3.1, "partnership_2030": 297.2, "financial_education": "Limited", "ipo_status": "Private", "growth_rate": 10, "ebitda_margin": -8.9},
+    {"company": "Emeritus", "fy25_revenue": 2100, "profit_loss": -200, "valuation_usd": 3.2, "users_million": 1.8, "securities_addressable": 1.08, "tam_crores": 9.2, "partnership_2030": 866.0, "financial_education": "Finance MBA", "ipo_status": "Private", "growth_rate": 15, "ebitda_margin": -9.5}
   ],
   "revenue_model": {
     "course_fees": 70,
@@ -1116,7 +1116,7 @@ function showScheduleModalInternal() {
     <p>Please contact us to schedule a comprehensive presentation.</p>
     <div class="contact-info" style="background: var(--color-secondary); padding: var(--space-16); border-radius: var(--radius-base); margin: var(--space-16) 0;">
       <p><strong>📧 Email:</strong> partnerships@quantedu.in</p>
-      <p><strong>📱 Phone:</strong> +91-9876543211</p>
+      <p><strong>📱 Phone:</strong> +91-7898696623</p>
       <p><strong>🌐 Calendar:</strong> calendly.com/quantedu/partnership</p>
     </div>
     <div style="display: flex; gap: var(--space-12); justify-content: center;">
@@ -1133,12 +1133,12 @@ function showContactModalInternal() {
       <div style="background: var(--color-secondary); padding: var(--space-16); border-radius: var(--radius-base);">
         <h4>Business Development</h4>
         <p>📧 partnerships@quantedu.in</p>
-        <p>📱 +91-9876543211</p>
+        <p>📱 +91-7898696623</p>
       </div>
       <div style="background: var(--color-secondary); padding: var(--space-16); border-radius: var(--radius-base);">
         <h4>Technical Integration</h4>
         <p>📧 tech@quantedu.in</p>
-        <p>📱 +91-9876543212</p>
+        <p>📱 +91-9033169431</p>
       </div>
     </div>
   `);
@@ -1221,8 +1221,8 @@ Q4 2025: Full Market Launch & Scaling
 ===== SLIDE 10: NEXT STEPS & CONTACT =====
 Contact Information:
 Email: partnerships@quantedu.in
-Phone: +91-9876543211
-Calendar: calendly.com/quantedu/partnership
+Phone: +91-7898696623
+Calendar: https://calendly.com/survesh/30min
 
 Immediate Actions:
 1. Schedule Executive Presentation
