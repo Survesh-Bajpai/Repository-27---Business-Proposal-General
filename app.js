@@ -236,7 +236,7 @@ function clearPeerSelection() {
     dashboard.innerHTML = `
       <div class="no-peer-selected">
         <div class="placeholder-content">
-          <h3>🚀 Welcome to QuantEdu Partnership Platform</h3>
+          <h3>🚀 Welcome to FinTechEdu Partnership Platform</h3>
           <p>Select an EdTech partner above to view comprehensive business intelligence, financial projections, and partnership opportunities.</p>
           <div class="feature-highlights">
             <div class="feature-item" onclick="showSection('market-analysis')">
@@ -819,7 +819,7 @@ function createMarketShareChart() {
     charts.marketShare = new Chart(ctx, {
       type: 'pie',
       data: {
-        labels: [`${currentPeer} + QuantEdu`, 'Other Players', 'Unaddressed Market'],
+        labels: [`${currentPeer} + FinTechEdu`, 'Other Players', 'Unaddressed Market'],
         datasets: [{
           data: [
             peerData.partnership_2030 / 100,
@@ -1112,32 +1112,32 @@ function initializeButtons() {
 
 function showScheduleModalInternal() {
   createModal('Schedule Executive Presentation', `
-    <p>Thank you for your interest in partnering with QuantEdu!</p>
+    <p>Thank you for your interest in partnering with FinTechEdu!</p>
     <p>Please contact us to schedule a comprehensive presentation.</p>
     <div class="contact-info" style="background: var(--color-secondary); padding: var(--space-16); border-radius: var(--radius-base); margin: var(--space-16) 0;">
-      <p><strong>📧 Email:</strong> partnerships@quantedu.in</p>
+      <p><strong>📧 Email:</strong> partnerships@FinTechEdu.in</p>
       <p><strong>📱 Phone:</strong> +91-7898696623</p>
-      <p><strong>🌐 Calendar:</strong> calendly.com/quantedu/partnership</p>
+      <p><strong>🌐 Calendar:</strong> calendly.com/FinTechEdu/partnership</p>
     </div>
     <div style="display: flex; gap: var(--space-12); justify-content: center;">
-      <button class="btn btn--primary" onclick="window.open('mailto:partnerships@quantedu.in', '_blank')">📧 Send Email</button>
+      <button class="btn btn--primary" onclick="window.open('mailto:partnerships@FinTechEdu.in', '_blank')">📧 Send Email</button>
       <button class="btn btn--outline" onclick="window.open('tel:+919876543211', '_blank')">📞 Call Now</button>
     </div>
   `);
 }
 
 function showContactModalInternal() {
-  createModal('Contact QuantEdu Partnership Team', `
+  createModal('Contact FinTechEdu Partnership Team', `
     <p>Get in touch with our partnership specialists for detailed discussions.</p>
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); margin: var(--space-16) 0;">
       <div style="background: var(--color-secondary); padding: var(--space-16); border-radius: var(--radius-base);">
         <h4>Business Development</h4>
-        <p>📧 partnerships@quantedu.in</p>
+        <p>📧 partnerships@FinTechEdu.in</p>
         <p>📱 +91-7898696623</p>
       </div>
       <div style="background: var(--color-secondary); padding: var(--space-16); border-radius: var(--radius-base);">
         <h4>Technical Integration</h4>
-        <p>📧 tech@quantedu.in</p>
+        <p>📧 tech@FinTechEdu.in</p>
         <p>📱 +91-9033169431</p>
       </div>
     </div>
@@ -1155,7 +1155,7 @@ function handleDownloadInternal() {
   
   // Generate 10-slide presentation content
   const slidesContent = `
-QuantEdu Partnership Proposal - ${currentPeer}
+FinTechEdu Partnership Proposal - ${currentPeer}
 10-SLIDE EXECUTIVE PRESENTATION
 
 ===== SLIDE 1: EXECUTIVE SUMMARY =====
@@ -1170,7 +1170,7 @@ ${currentPeer} Specific TAM: ₹${peerData.tam_crores} Cr
 Growth Rate: ${peerData.growth_rate}%
 Financial Education Focus: ${peerData.financial_education}
 
-===== SLIDE 3: QUANTEDU VALUE PROPOSITION =====
+===== SLIDE 3: FinTechEdu VALUE PROPOSITION =====
 • 15+ Years WorldQuant Experience
 • SEBI Registered RA/IA/PM Professionals
 • Complete 10 Certification Coverage (CFA, NISM, CMT, CAIA, CFP)
@@ -1220,7 +1220,7 @@ Q4 2025: Full Market Launch & Scaling
 
 ===== SLIDE 10: NEXT STEPS & CONTACT =====
 Contact Information:
-Email: partnerships@quantedu.in
+Email: partnerships@FinTechEdu.in
 Phone: +91-7898696623
 Calendar: https://calendly.com/survesh/30min
 
@@ -1230,7 +1230,7 @@ Immediate Actions:
 3. Term Sheet Negotiation
 4. Partnership Agreement
 
-Prepared by: QuantEdu Partnership Team
+Prepared by: FinTechEdu Partnership Team
 Date: ${new Date().toLocaleDateString('en-IN')}
 Confidential & Proprietary
 `;
@@ -1240,7 +1240,7 @@ Confidential & Proprietary
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = `QuantEdu_${currentPeer}_10_Slide_Presentation.txt`;
+    link.download = `FinTechEdu_${currentPeer}_10_Slide_Presentation.txt`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -1376,7 +1376,7 @@ function createMobileToggle() {
 
 // Application Initialization
 function initializeApp() {
-  console.log('Initializing QuantEdu Partnership Platform...');
+  console.log('Initializing FinTechEdu Partnership Platform...');
   
   // Initialize all components
   try {
@@ -1409,8 +1409,8 @@ function initializeApp() {
       console.log('✓ Base charts initialized');
     }, 500);
     
-    console.log('🚀 QuantEdu Partnership Platform initialized successfully!');
-    showNotification('Welcome to QuantEdu Partnership Platform!', 'success');
+    console.log('🚀 FinTechEdu Partnership Platform initialized successfully!');
+    showNotification('Welcome to FinTechEdu Partnership Platform!', 'success');
     
   } catch (error) {
     console.error('Initialization error:', error);
